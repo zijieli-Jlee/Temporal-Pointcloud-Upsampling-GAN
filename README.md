@@ -29,17 +29,7 @@ We also provide generated data at link: https://drive.google.com/drive/folders/1
 The MSR-Action dataset is taken from MeteorNet: https://github.com/xingyul/meteornet/tree/master/action_cls.
 
 ### Training and inference
-* The train and test data can be generated using generate_data.py in "./training" folder: 
- ```
- cd training
- python generate_data.py
- ``` 
-* To run the simulation using pretrained GNN:
-The example simulation script is in the "./running_script" folder. </br>
-```
-cd running_script
-sh gnn_simulate.sh
-``` 
+Please refer to subfolder ```train_fluid``` and ```train_action``` for details. Before training, create a folder named ```data``` and put collected data under this folder.
 
 ### Visualization and rendering
 We use Maya with [Partio plugin](https://github.com/InteractiveComputerGraphics/MayaPartioTools) to load and render the results (in .bgeo format).

@@ -29,12 +29,16 @@ We also provide generated data at link: https://drive.google.com/drive/folders/1
 The MSR-Action dataset is taken from MeteorNet: https://github.com/xingyul/meteornet/tree/master/action_cls.
 
 ### Training and inference
-Please refer to subfolder ```train_fluid``` and ```train_action``` for details. Before training, create a folder named ```data``` and put collected data under this folder.
+Please refer to subfolder ```train_fluid``` and ```train_action``` for more details. Before training, create a folder named ```data``` and put collected data under this folder.
 
 ### Visualization and rendering
 We use Maya with [Partio plugin](https://github.com/InteractiveComputerGraphics/MayaPartioTools) to load and render the results (in .bgeo format).
 
 ### Acknowledgement
-* Conjugate gradient solver in Pytorch: https://github.com/sbarratt/torch_cg
-* Continuous convolution for end-to-end position based fluid simulation: https://github.com/isl-org/DeepLagrangianFluids
+The code in this project is partially based on or inspired from following great projects.
+* PointNet2 Pytorch:https://github.com/erikwijmans/Pointnet2_PyTorch & https://github.com/yanx27/Pointnet_Pointnet2_pytorch
+* Flownet3D Pytorch: https://github.com/hyangwinter/flownet3d_pytorch
+* Continuous convolution for learning fluid simulation: https://github.com/isl-org/DeepLagrangianFluids
 * SPH library: https://github.com/InteractiveComputerGraphics/SPlisHSPlasH
+* GCN in native Pytorch: https://github.com/lightaime/deep_gcns_torch
+* PU-GCN: https://github.com/guochengqian/PU-GCN

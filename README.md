@@ -1,4 +1,4 @@
-## Temporal-Point-Cloud-Upsampling-GAN
+## Temporal-Pointcloud-Upsampling-GAN
 Code repo for TPU-GAN ([paper](https://openreview.net/pdf?id=FEBFJ98FKx))
 
 ### Requirement
@@ -24,7 +24,7 @@ And process the simulation data (in bgeo format) into npz data. This step requir
 ```bash
 python process_training_data.py
 ```
-We also provide generated data at link: https://drive.google.com/drive/folders/1313m62z5mM_vEUg0ptFrnuZP8YJmwKQ2?usp=sharing.
+We also provide generated data at [link](https://drive.google.com/drive/folders/1313m62z5mM_vEUg0ptFrnuZP8YJmwKQ2?usp=sharing).
 
 The MSR-Action dataset is taken from MeteorNet: https://github.com/xingyul/meteornet/tree/master/action_cls.
 

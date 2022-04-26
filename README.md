@@ -13,7 +13,7 @@ The code is tested under Linux Ubuntu 18.04 with CUDA 10.2.
 ### Dataset
 We use DFSPH solver from SPLISHSPLASH (https://github.com/InteractiveComputerGraphics/SPlisHSPlasH) to generate simulation data. The geometry assets and Python script for simulation are taken and tweaked from CConv: https://github.com/isl-org/DeepLagrangianFluids. </br>
 
-To generate fluid data, first install SPLISHSPLASH following: https://splishsplash.readthedocs.io/en/latest/build_from_source.html (with Python bindings turned on), and set the path to binary at line 3 of ```splishsplash_config.py``` under ```fluid_data_generation``` folder. 
+To generate fluid data, first install SPLISHSPLASH following: https://splishsplash.readthedocs.io/en/latest/build_from_source.html (with Python bindings turned on), and set the path to binary at line 3 of ```splishsplash_config.py``` under ```fluid_data_generation``` folder. Download geometry assets from [link](https://github.com/isl-org/DeepLagrangianFluids/tree/master/datasets/models) and put them under the folder ```fluid_data_generation/models```.
 
 Then run SPH simulation by:
 ```bash
@@ -35,10 +35,11 @@ Please refer to subfolder ```train_fluid``` and ```train_action``` for more deta
 We use Maya with [Partio plugin](https://github.com/InteractiveComputerGraphics/MayaPartioTools) to load and render the results (in .bgeo format).
 
 ### Acknowledgement
-The code in this project is partially based on or inspired from following great projects.
+The code in this project is partially based on or inspired from following projects.
 * PointNet2 Pytorch:https://github.com/erikwijmans/Pointnet2_PyTorch & https://github.com/yanx27/Pointnet_Pointnet2_pytorch
 * Flownet3D Pytorch: https://github.com/hyangwinter/flownet3d_pytorch
-* Continuous convolution for learning fluid simulation: https://github.com/isl-org/DeepLagrangianFluids
+* Continuous convolution for fluid simulation: https://github.com/isl-org/DeepLagrangianFluids
 * SPH library: https://github.com/InteractiveComputerGraphics/SPlisHSPlasH
 * GCN in native Pytorch: https://github.com/lightaime/deep_gcns_torch
 * PU-GCN: https://github.com/guochengqian/PU-GCN
+* PST-Conv: https://github.com/hehefan/Point-Spatio-Temporal-Convolution

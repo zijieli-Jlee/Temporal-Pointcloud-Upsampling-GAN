@@ -29,7 +29,7 @@ We also provide generated data at [link](https://drive.google.com/drive/folders/
 The MSR-Action dataset is taken from MeteorNet: https://github.com/xingyul/meteornet/tree/master/action_cls.
 
 ### Training and inference
-Please refer to subfolder ```train_fluid``` and ```train_action``` for more details. Before training, create a folder named ```data``` and put collected data under this folder.
+Please refer to subfolder ```train_fluid``` and ```train_action``` for more details. Before training, create a folder named ```data``` (under base directory, i.e. ```Temporal-Pointcloud-Upsampling-GAN/data```) and put collected data under this folder.
 
 ### Visualization and rendering
 We use Maya with [Partio plugin](https://github.com/InteractiveComputerGraphics/MayaPartioTools) to load and render the results (in .bgeo format).

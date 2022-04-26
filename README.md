@@ -11,7 +11,7 @@ Code repo for TPU-GAN ([paper](https://openreview.net/pdf?id=FEBFJ98FKx))
 The code is tested under Linux Ubuntu 18.04 with CUDA 10.2.
 
 ### Dataset
-We use DFSPH solver from SPLISHSPLASH (https://github.com/InteractiveComputerGraphics/SPlisHSPlasH) to generate simulation data. The geometry assets and Python script for simulation are taken and tweaked from CConv: https://github.com/isl-org/DeepLagrangianFluids. </br>
+We use DFSPH solver from SPLISHSPLASH (https://github.com/InteractiveComputerGraphics/SPlisHSPlasH) to generate simulation data. The geometry assets and Python script for simulation are taken and tweaked from [CConv, Benjamin Ummenhofer et al.](https://github.com/isl-org/DeepLagrangianFluids) under CDLA-Permissive-1.0 and MIT license respectively. </br>
 
 To generate fluid data, first install SPLISHSPLASH following: https://splishsplash.readthedocs.io/en/latest/build_from_source.html (with Python bindings turned on), and set the path to binary at line 3 of ```splishsplash_config.py``` under ```fluid_data_generation``` folder. Download geometry assets from [link](https://github.com/isl-org/DeepLagrangianFluids/tree/master/datasets/models) and put them under the folder ```fluid_data_generation/models```.
 

@@ -7,6 +7,10 @@ Code repo for TPU-GAN ([paper](https://openreview.net/pdf?id=FEBFJ98FKx))
 * Chamfer distance module: https://github.com/krrish94/chamferdist
 * PointNet2 ops from: https://github.com/erikwijmans/Pointnet2_PyTorch (could be installed by cloning the repo and run ```pip install pointnet2_ops_lib/.```)
 * Other packages can be installed through: ```conda env create -f environment.yml```
+Optional (for post analysis or I/O, not required for training): 
+* PyTorch EMD from: https://github.com/Colin97/MSN-Point-Cloud-Completion/tree/master/emd
+* GeomLoss from: https://www.kernel-operations.io/geomloss/api/install.html
+* Partio from: (https://github.com/wdas/partio)
 
 The code is tested under Linux Ubuntu 18.04 with CUDA 10.2.
 
@@ -20,7 +24,7 @@ Then run SPH simulation by:
 cd fluid_data_generation
 python sim_fluid_sequence.py
 ```
-And process the simulation data (in bgeo format) into npz data. This step requires Partio (https://github.com/wdas/partio) installed.
+And process the simulation data (in bgeo format) into npz data. This step requires Partio installed.
 ```bash
 python process_training_data.py
 ```

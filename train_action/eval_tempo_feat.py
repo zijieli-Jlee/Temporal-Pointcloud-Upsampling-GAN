@@ -15,7 +15,6 @@ from msr_dataset import MSRAction3D
 sys.path.append(os.path.join(os.path.dirname(__file__), '../'))
 from utils import load_checkpoint
 from discriminator import ActionTempoDis, ActionCls
-from train_utils import visualize_pointcloud
 
 
 def parse_args():
@@ -139,7 +138,7 @@ def main(args):
     classifier.init_feature_extractor(pretrained_model)
 
     total_params = sum(p.numel() for p in classifier.parameters() if p.requires_grad)
-    print(f'Total trainable parameters for SA-MLP: {total_params}')
+    print(f'Total trainable parameters for SA+MLP: {total_params}')
     classifier = classifier.cuda()
     del pretrained_model
     criterion = torch.nn.NLLLoss()
@@ -153,7 +152,7 @@ def main(args):
             weight_decay=args.decay_rate
         )
     else:
-        optimizer = torch.optim.SGD(lambda p: p.requires_grad, classifier.parameters(), lr=0.01, momentum=0.9)
+        optimizer = torch.optim.SGD(filter(lambda p: p.requires_grad, classifier.parameters()), lr=0.01, momentum=0.9)
 
     scheduler = torch.optim.lr_scheduler.StepLR(optimizer, step_size=20, gamma=0.7)
     global_epoch = 0

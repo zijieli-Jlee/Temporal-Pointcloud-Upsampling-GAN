@@ -5,12 +5,14 @@ Code repo for TPU-GAN ([paper](https://openreview.net/pdf?id=FEBFJ98FKx))
 * PyTorch3D from: https://github.com/facebookresearch/pytorch3d/blob/main/INSTALL.md
 * FRNN from: https://github.com/lxxue/FRNN
 * Chamfer distance module: https://github.com/krrish94/chamferdist
-* PointNet2 ops from: https://github.com/erikwijmans/Pointnet2_PyTorch (could be installed by cloning the repo and run ```pip install pointnet2_ops_lib/.```)
-* Other packages can be installed through: ```conda env create -f environment.yml```
+* PointNet2 ops from: https://github.com/erikwijmans/Pointnet2_PyTorch (could be installed by cloning the repo from the link and run ```pip install pointnet2_ops_lib/.```)
+
+Other packages can be installed through: ```conda env create -f environment.yml```
+
 Optional (for post analysis or I/O, not required for training): 
 * PyTorch EMD from: https://github.com/Colin97/MSN-Point-Cloud-Completion/tree/master/emd
 * GeomLoss from: https://www.kernel-operations.io/geomloss/api/install.html
-* Partio from: (https://github.com/wdas/partio)
+* Partio from: https://github.com/wdas/partio
 
 The code is tested under Linux Ubuntu 18.04 with CUDA 10.2.
 
@@ -33,8 +35,14 @@ We also provide generated data at [link](https://drive.google.com/drive/folders/
 The MSR-Action dataset is taken from MeteorNet: https://github.com/xingyul/meteornet/tree/master/action_cls.
 
 ### Training and inference
-The training scripts and pretrained models are under subfolder ```train_fluid``` and ```train_action```. Please refer to them for more details. Before training, create a folder named ```data``` (under base directory, i.e. ```Temporal-Pointcloud-Upsampling-GAN/data```) and put collected data under this folder.
-
+The training scripts and pretrained models are under subfolder ```train_fluid``` and ```train_action```. Please refer to them for more details. Before training, create a folder named ```data``` (under base directory, i.e. ```Temporal-Pointcloud-Upsampling-GAN/data```) and put collected data under this folder with following structure:
+```
+data
+├── train_data_0.025_fine (for fluids)
+├── test_data_0.025_fine (for fluids)
+├── bunny (for fluid demo)
+├── MSR-Action3D (for action)
+```
 ### Visualization and rendering
 We use Maya with [Partio plugin](https://github.com/InteractiveComputerGraphics/MayaPartioTools) to load and render the results (in .bgeo format).
 
